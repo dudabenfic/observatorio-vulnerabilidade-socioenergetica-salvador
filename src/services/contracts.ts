@@ -1,0 +1,2 @@
+import type { EnergyPoint, Indicator, Observation, ObservationFilter, Source, Territory } from '../types/data'
+export interface DataService { getTerritories(): Promise<Territory[]>; getIndicators(): Promise<Indicator[]>; getObservations(filters?: ObservationFilter): Promise<Observation[]>; getSources(): Promise<Source[]>; getEnergySeries(): Promise<EnergyPoint[]>; getTerritoryGeoJSON(territoryId: string): Promise<unknown | null> }
